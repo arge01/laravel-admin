@@ -1,0 +1,65 @@
+/* --------------------------------------------------------------
+
+   reset.css
+   * Resets default browser CSS.
+
+-------------------------------------------------------------- */
+
+
+
+#fb5,#fb5 a,#fb5 abbr,#fb5 address,#fb5 article,#fb5 aside,#fb5 audio,#fb5 b,#fb5 blockquote, #fb5 button,#fb5 canvas, 
+#fb5 caption,#fb5 cite,#fb5 code,#fb5 dd,#fb5 del,#fb5 details,#fb5 dfn,#fb5 div,#fb5 dl,#fb5 dt,#fb5 em,#fb5 embed,#fb5 fieldset,
+#fb5 figcaption,#fb5 figure,#fb5 footer,#fb5 form,#fb5 h1,#fb5 h2,#fb5 h3,#fb5 h4,#fb5 h5,#fb5 h6,#fb5 header,#fb5 hgroup,#fb5 i,#fb5 iframe,#fb5 img,#fb5 ins,#fb5 kbd,#fb5 label,#fb5 legend,#fb5.fb5 li,#fb5 mark,#fb5 menu,#fb5 nav, 
+#fb5 object,#fb5 ol,#fb5 p,#fb5 pre,#fb5 q,#fb5 samp,#fb5 section,#fb5 small,#fb5 span,#fb5 sub,#fb5 summary,#fb5 sup,#fb5 table,#fb5 tbody,#fb5 td,#fb5 tfoot,#fb5 th,#fb5 thead,#fb5 time,#fb5 tr,#fb5 ul,#fb5 var,#fb5 video,#fb5 input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius:0;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+	line-height:1.5 !important;
+	text-align:left;
+	
+	box-shadow:none;
+	text-shadow:none;
+	overflow:visible;
+	background:none;
+	list-style:none;	
+	background-image: none
+	display:none;
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+}
+
+#fb5.fb5 li, #fb5 li:before, #fb5:after {
+    content:none;
+}
+
+#fb5 img {
+		
+}
+
+#fb5 article,#fb5 aside,#fb5 canvas,#fb5 details,#fb5 figcaption,#fb5 figure,#fb5 footer,#fb5 header,#fb5 hgroup,#fb5 menu,#fb5 nav,#fb5 section,#fb5 summary { display: block; }
+
+#fb5 a,#fb5 ins,#fb5 del { text-decoration: none; }
+
+#fb5 ul,#fb5 ol {
+	 list-style: none;
+	 text-indent:0px;
+	 margin:0 !important;
+}
+
+#fb5 table {
+	border-spacing: 0;
+	border-collapse: collapse; }
+
+#fb5 caption,#fb5 th { text-align: left; }
+
+#fb5 q:after,#fb5 q:before { content: ""; }
+
+#fb5 a,#fb5 button:hover { cursor: pointer; }
+
+#fb5 input,#fb5 textarea { outline: none; }
+

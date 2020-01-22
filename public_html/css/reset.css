@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import url("./font-awesome-4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext');
+/*------------------------RESET CSS---------------------------------------*/
+body{
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	color: #5F5F5F;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 200%;
+}
+button:focus ,a:focus, .btn:focus, .btn:hover, a:hover, button:hover, button:visited, a:visited, .btn:visited {
+	outline: none;
+}
+h1, h2, h3, h4, h5, hr, img, a, table, tbody, tr, td, th, ul, li, ol, iframe, p, form, input, textarea{
+	border: 0;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: 'Montserrat', sans-serif;
+	}
+h1, h2, h3, h4, h5, hr, img, a, table, tbody, tr, td, th, ul, li, ol, iframe, p, form, a:hover, input:hover, textarea:hover {
+	outline: none;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, hr, img, a, table, tbody, tr, td, th, ul, li, ol, iframe, p, form, a:focus, input:focus, textarea:focus {
+	outline: none;
+	text-decoration: none;
+}
+div, a{
+	display: block;
+	}
+table{
+	width:100%;
+	font-size: 100%;
+	border-collapse:collapse;
+	text-align: left;
+	}
+table tr{
+	font-size: 100%;
+	border: 1px solid #F4F4F4;
+	padding: 15px;
+	font-weight: normal;
+	text-align: left;
+	}
+table tr td{
+	font-size: 100%;
+	border: 1px solid #F4F4F4;
+	padding: 15px;
+	font-weight: normal;
+	text-align: left;
+	}
+table tr th{
+	font-size: 100%;
+	border: 0px;
+	padding: 15px;
+	font-weight: 700;
+	text-align: left;
+	}
+/* provide some minimal visual accomodation for IE8 and below */
+body table tr{
+	background-color: #FFFFFF;
+	}
+/*  Define the background color for all the ODD background rows  */
+body table tr:nth-child(odd){
+	background-color: #FFFFFF;
+	}
+/*  Define the background color for all the EVEN background rows  */
+body table tr:nth-child(even){
+	background-color: #FBFBFB;
+	}
+.font-bold{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	}
+.font-light{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	}
+.clear{
+	clear: both;
+	}
+/*------------------------RESET CSS---------------------------------------*/

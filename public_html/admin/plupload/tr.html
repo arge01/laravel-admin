@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<title>Plupload - jQuery UI Widget</title>
+
+<script type="text/javascript" src="js/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/plupload.full.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/jquery.ui.plupload.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://www.plupload.com/i18n/export/tr" charset="UTF-8"></script>
+<link type="text/css" rel="stylesheet" href="js/jquery-ui.min.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="js/jquery.ui.plupload.css" media="screen" />
+
+</head>
+<body>
+
+<div id="uploader">
+	<p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+</div>
+
+<script type="text/javascript">
+// Initialize the widget when the DOM is ready
+$(function() {
+	$("#uploader").plupload({
+		// General settings
+		runtimes : 'html5,flash,silverlight,html4',
+		url : '../upload.php',
+
+		// Maximum file size
+		max_file_size : '1000mb',
+
+		// User can upload no more then 20 files in one go (sets multiple_queues to false)
+		max_file_count: 20,
+		
+		chunk_size: '1mb',
+
+		// Resize images on clientside if we can
+		resize : {
+			width : 200, 
+			height : 200, 
+			quality : 90,
+			crop: true // crop to exact dimensions
+		},
+
+		// Specify what files to browse for
+		filters : [
+			{title : "Image files", extensions : "jpg,gif,png"},
+			{title : "Zip files", extensions : "zip,avi"}
+		],
+
+		// Rename files by clicking on their titles
+		rename: true,
+		
+		// Sort files
+		sortable: true,
+
+		// Enable ability to drag'n'drop files onto the widget (currently only HTML5 supports that)
+		dragdrop: true,
+
+		// Views to activate
+		views: {
+			list: true,
+			thumbs: true, // Show thumbs
+			active: 'thumbs'
+		},
+
+		// Flash settings
+		flash_swf_url : '../../js/Moxie.swf',
+
+		// Silverlight settings
+		silverlight_xap_url : '../../js/Moxie.xap'
+	});
+});
+</script>
+</body>
+</html>

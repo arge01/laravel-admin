@@ -1,0 +1,219 @@
+.dropdown-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 210px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #404040;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    /*display: block;*/
+    height: auto !important;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    height: 50px;
+}
+
+#header ul li:hover .dropdown-menu {display: block}
+
+.dropdown-menu li {padding: 0;margin: 0;width: 100% !important;height: 50px !important;margin: 0 !important;}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {background: #fff;}
+
+.mega-dropdown {
+
+    position: static !important;
+
+}
+
+.mega-dropdown-menu {
+
+    padding: 20px 0px;
+
+    width: 100%;
+
+    box-shadow: none;
+
+    -webkit-box-shadow: none;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+}
+
+.mega-dropdown-menu > li > ul {
+
+    padding: 10px 30px;
+
+    margin: 0 15px;
+
+}
+
+.mega-dropdown-menu > li > ul > li {
+
+    list-style: none;
+
+}
+
+.mega-dropdown-menu > li > ul > li > a {
+
+    display: block;
+
+    color: #222;
+
+    padding: 0;
+
+}
+
+.mega-dropdown-menu > li ul > li > a:hover,
+
+.mega-dropdown-menu > li ul > li > a:focus {
+
+    text-decoration: none;
+
+}
+
+.mega-dropdown-menu .dropdown-header {
+
+    text-align: left;
+
+    font-size: 18px;
+
+    color: #272727;
+
+    padding: 30px 60px 10px 0;
+
+    line-height: 30px;
+
+    /* border-bottom: 1px solid #efefef; */
+
+}
+
+
+
+.carousel-control {
+
+    width: 30px;
+
+    height: 30px;
+
+    top: -35px;
+
+
+
+}
+
+.left.carousel-control {
+
+    right: 30px;
+
+    left: inherit;
+
+}
+
+.carousel-control .glyphicon-chevron-left,
+
+.carousel-control .glyphicon-chevron-right {
+
+    font-size: 12px;
+
+    background-color: #fff;
+
+    line-height: 30px;
+
+    text-shadow: none;
+
+    color: #333;
+
+    border: 1px solid #ddd;
+
+}
+
+.mega-dropdown-menu ul li {
+
+    width: 100%;
+
+    height: auto;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.mega-dropdown-menu > li > ul > li > a {
+
+    display: block;
+
+    color: #d0e204;
+
+    padding: 0;
+
+    font-size: 10pt;
+
+    text-align: left;
+
+}
+
+.mega-dropdown-menu > li > ul > li > a::before {
+
+    color: #d9e834;
+
+    margin-right: 5px;
+
+    content: "\f101";
+
+    font-family: FontAwesome;
+
+}
+
+.mega-dropdown-menu > li > ul > li:hover > a, .mega-dropdown-menu > li > ul > li:hover > a::before {
+
+    color: #000000;
+
+}
+
+.mega-dropdown-menu > li > ul > li:hover > a::before {
+
+    content: "\f101";
+
+    font-family: FontAwesome;
+
+}
+
+.mega-dropdown-menu > li > ul > li.active > a, .mega-dropdown-menu > li > ul > li.active > a::before {
+
+    color: #000000;
+
+}
+
+.nav-bar-back {
+
+    width: 100%;
+
+    height: 100vh;
+
+    position: fixed;
+
+    top: 0;
+
+    background: rgba(0,0,0,.9);
+
+    display: none;
+
+}

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>jQuery Carousel Evolution</title>
+    
+    <link rel="Stylesheet" type="text/css" href="carousel.css" />
+    
+    <script type="text/javascript" src="../scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.carousel-1.1.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+            $('.carousel').carousel({directionNav:false, buttonNav:'bullets', carouselWidth:480, carouselHeight:320, 
+                                    slidesPerScroll:3, top:10, hMargin:0.2, frontWidth:350, 
+                                    description:true, descriptionContainer:'.description'});
+        
+        });
+    </script>
+</head>
+<body>
+
+<div class="carousel"> <!-- BEGIN CAROUSEL -->
+    
+    <div class="description"> <!-- BEGIN DESCRIPTION -->
+        <div> <!-- DESCRIPTION ITEM -->
+            <h2>Description 1</h2>
+            <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, 
+            tristique sed odio. Praesent ut interdum elit. Sed in sem mauris. Aenean a commodo mi. Praesent augue lacus.
+            </p>
+            <p>Vivamus ut urna magna. Aenean vehicula feugiat leo, sit amet facilisis felis commodo a. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet erat enim.</p>
+            <a href="#">Read more...</a>
+        </div>
+        
+        <div>
+            <h2>Description 2</h2>
+            <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, 
+            tristique sed odio. Praesent ut interdum elit. Sed in sem mauris. Aenean a commodo mi. Praesent augue lacus.
+            </p>
+            <p>Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan at nec nisi. 
+            Aliquam pretium mollis fringilla. Vestibulum tempor facilisis malesuada.</p>
+            <a href="#">Read more...</a>
+        </div>
+        
+        <div>
+            <h2>Description 3</h2>
+            <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, 
+            tristique sed odio. Praesent ut interdum elit. Sed in sem mauris. Aenean a commodo mi. Praesent augue lacus.
+            </p>
+            <p>Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan at nec nisi. 
+            Aliquam pretium mollis fringilla. Vestibulum tempor facilisis malesuada.</p>
+            <a href="#">Read more...</a>
+        </div>
+        
+        <div>
+            <h2>Description 4</h2>
+            <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, 
+            tristique sed odio. Praesent ut interdum elit. Sed in sem mauris. Aenean a commodo mi. Praesent augue lacus.
+            </p>
+            <p>Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan at nec nisi. 
+            Aliquam pretium mollis fringilla. Vestibulum tempor facilisis malesuada.</p>
+            <a href="#">Read more...</a>
+        </div>
+        
+        <div>
+            <h2>Description 5</h2>
+            <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, 
+            tristique sed odio. Praesent ut interdum elit. Sed in sem mauris. Aenean a commodo mi. Praesent augue lacus.
+            </p>
+            <p>Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan at nec nisi. 
+            Aliquam pretium mollis fringilla. Vestibulum tempor facilisis malesuada.</p>
+            <a href="#">Read more...</a>
+        </div>
+        
+    </div> <!-- END DESCRIPTION -->
+    
+    <div class="slides"> <!-- BEGIN SLIDES -->
+    
+        <div> <!-- SLIDE ITEM -->
+            <a class="video" href="http://vimeo.com/21294655">
+                <img src="../gallery/slide-1.jpg" alt="vimeo" />
+            </a>            
+        </div>
+        
+        <div>
+            <a href="#">
+                <img src="../gallery/slide-2.jpg" alt="karma" />
+            </a>
+        </div>
+        
+        <div>
+            <a class="video" href="http://www.youtube.com/watch?v=pQo8LMaeE8s">
+                <img src="../gallery/slide-3.jpg" alt="garnish" />
+            </a>
+        </div>
+        
+        <div>
+            <a href="#">
+                <img src="../gallery/slide-4.jpg" alt="codecanyon" />
+            </a>
+        </div>
+        
+        <div>
+            <a href="#">
+                <img src="../gallery/slide-5.jpg" alt="evernote" />
+            </a>
+        </div>
+                        
+    </div> <!-- END SLIDES -->
+       
+</div> <!-- END CAROUSEL -->
+
+
+</body>
+</html>

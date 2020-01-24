@@ -14,8 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       $pluk = \App\Models\Ayarlar::pluck('value', 'name')->all();
-        config()->set("ayarlar", $pluk);
+       /*$pluk = \App\Models\Ayarlar::pluck('value', 'name')->all();
+        config()->set("ayarlar", $pluk);*/
     }
 
     /**

@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use \App\Models\Ayarlar;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,8 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       /*$pluk = \App\Models\Ayarlar::pluck('value', 'name')->all();
-        config()->set("ayarlar", $pluk);*/
+        try {
+            $pluk = Ayarlar::pluck('value', 'name')->all();
+            config()->set("ayarlar", $pluk);
+        } catch(\PDOException $e) {}
     }
 
     /**

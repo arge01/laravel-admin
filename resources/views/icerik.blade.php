@@ -1,5 +1,5 @@
 @extends('master.master')
-@section('title', config('ayarlar.baslik'). ' | '. $gelen->name)
+@section('title', config('ayarlar.baslik'). ' | '. $title)
 @section('content')
     <!-- content -->
 

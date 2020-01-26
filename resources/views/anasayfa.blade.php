@@ -1,5 +1,5 @@
 @extends('master.master')
-@section('title', config('ayarlar.baslik'))
+@section('title', config('ayarlar.baslik') . ' | ' . $title)
 @section('content')
     <!-- content -->
     <main class="d-flex justify-content-center align-items-center min-vh-100">

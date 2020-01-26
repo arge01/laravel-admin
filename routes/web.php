@@ -133,23 +133,29 @@ Route::group(['prefix' => 'yonetim', 'namespace' => 'Yonetim'], function() {
     });
 });
 Route::group(['prefix' => ''], function(){
+    /*
+    * route anasayfa
+    */
     Route::get('/', 'AnasayfaController@anasayfa')->name('anasayfa');
     Route::get('/index.html', 'AnasayfaController@anasayfa')->name('anasayfa');
+    /*
+    * route mail
+    */
     Route::match(['get', 'post'],'/mailgonder', 'AnasayfaController@mailgonder')->name('mail.gonder');
-
-    Route::match(['get', 'post'], '/franchise.html', 'AnasayfaController@franchise')->name('franchise');
     
+    /*
+     * route any file
+    */
     Route::get('{view}.html', function ($view, AnasayfaController $controller) {
         if (view()->exists($view)) {
-            return $controller->deneme();
-        }
-    
-        return app()->abort(404, 'Page not found!');
+            return $controller->get_view($view);
+        } return app()->abort(404, 'Page not found!');
     });
     
+    /*
+     * route google seo
+    */
     Route::get('/api', 'AnasayfaController@api')->name('api');
     Route::get('/sitemap.xml', 'AnasayfaController@sitemap')->name('sitemap.xml');
     Route::get('/rss.xml', 'AnasayfaController@rss')->name('rss.xml');
-
-    Route::get('/{gelen}.html', 'AnasayfaController@icerik')->name('icerik');
 });

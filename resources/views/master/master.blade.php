@@ -12,6 +12,8 @@
     <title>Bootstrap-4.4.1 for Arif GEVENCI</title>
     <!-- bootstrap 4.4.1 -->
     <link rel="stylesheet" href="{{ config('app.url') }}css/bootstrap-4/bootstrap.min.css">
+    <!-- fontawesome 5.12.0 -->
+    <link href="{{ config('app.url') }}css/fontawesome-5.12/css/all.min.css" rel="stylesheet">
     <!-- reset css -->
     <link rel="stylesheet" href="{{ config('app.url') }}css/reset-css/standardized.min.css">
     <link rel="stylesheet" href="{{ config('app.url') }}css/reset-css/normalize.min.css">
@@ -33,7 +35,9 @@
 <script src="{{ config('app.url') }}js/popper.min.js"></script>
 <!-- bootstrap 4.4.1 -->
 <script src="{{ config('app.url') }}js/bootstrap-4/bootstrap.min.js"></script>
+<!-- fontawesome 5.12.0 -->
+<script src="{{ config('app.url') }}js/bootstrap-4/bootstrap.min.js"></script>
 <!-- javascript -->
-<script src="{{ config('app.url') }}js/script.js"></script>
+<script src="{{ config('app.url') }}css/fontawesome-5.12/js/all.min.js"></script>
 @yield('javascript')
 </html>

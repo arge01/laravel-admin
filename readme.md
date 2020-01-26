@@ -1,3 +1,9 @@
+<p>Laravel 5.4</p>
+<p>composer install</p>
+<p>db create db_name</p>
+<p>php artisan migrate</p>
+<p>php artisan db:seed</p>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

@@ -10,15 +10,25 @@ class AnasayfaController extends Controller
 {
     private $constant;
     private $request;
+
     private $ayarlar;
+    private $navbar;
+    private $slider;
+    private $referanslar;
+    private $footer;
 
     public function __construct(
         ConstantController $constant,
         Request $request)
     {
+        $this->ayarlar = $constant->settings(true);
+        $this->navbar = $constant->navbar();
+        $this->slider = $constant->slider(1,"ASC");
+        $this->referanslar = $constant->referances();
+        $this->footer = $constant->footer();
+        
         $this->constant = $constant;
         $this->request = $request;
-        $this->ayarlar = $this->constant->settings(true);
     }
 
     public function mailgonder()
@@ -40,13 +50,21 @@ class AnasayfaController extends Controller
     public function anasayfa()
     {
         $title = "";
-        return view('anasayfa', compact("title"));
+        $navbar = $this->navbar;
+        $slider = $this->slider;
+        $footer = $this->footer;
+
+        return view('anasayfa', compact("title", "navbar", "slider", "footer"));
     }
 
     public function icerikler($view_name)
     {
         $title = "";
-        return view($view_name, compact("title"));
+        $navbar = $this->navbar;
+        $slider = $this->slider;
+        $footer = $this->footer;
+
+        return view($view_name, compact("title", "navbar", "slider", "footer"));
     }
 
     public function api()

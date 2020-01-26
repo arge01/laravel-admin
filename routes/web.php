@@ -146,7 +146,7 @@ Route::group(['prefix' => ''], function(){
     /*
      * route any file
     */
-    Route::get('{view}.html', function ($view, AnasayfaController $controller) {
+    Route::match(['get', 'post'], '{view}.html', function ($view, AnasayfaController $controller) {
         if (view()->exists($view))
             return $controller->icerikler($view);
         return app()->abort(404, 'Page not found!');

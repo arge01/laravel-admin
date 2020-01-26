@@ -9,22 +9,27 @@ use Illuminate\Support\Facades\Mail;
 class AnasayfaController extends Controller
 {
     private $constant;
+    private $request;
     private $ayarlar;
 
-    public function __construct(ConstantController $constant){
+    public function __construct(
+        ConstantController $constant,
+        Request $request)
+    {
         $this->constant = $constant;
+        $this->request = $request;
         $this->ayarlar = $this->constant->settings(true);
     }
 
-    public function mailgonder(Request $request)
+    public function mailgonder()
     {
         if ( request()->isMethod('post') ) {
-            $data = $request->all();
+            $data = $this->request->all();
             
-            Mail::send('email.icerik', ['data' => $data], function ($mesaj) use ($data, $request) {
-                $mesaj->from($request->email);
+            Mail::send('email.icerik', ['data' => $data], function ($mesaj) use ($data) {
+                $mesaj->from($this->request->email);
                 $mesaj->to($this->ayarlar["mail"]);
-                $mesaj->subject($request->message);
+                $mesaj->subject($this->request->message);
             });
             
             return response()->json(['success' => 'Mesajınız bize ulaştı en kısa zamanda cevap gelecektir!', 'data' => $data]);

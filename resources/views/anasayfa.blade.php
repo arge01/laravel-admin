@@ -3,7 +3,12 @@
 @section('content')
     <!-- content -->
     <main class="d-flex justify-content-center align-items-center min-vh-100">
-        <p>{ <i class="fas fa-layer-group"></i> Developer By <span class="font-weight-bold text-light bg-dark p-1">Arif GEVENCI</span> }</p>
+        <p>
+            <span style="position: relative; top: 3px; font-size: 2.1em">{</span> 
+            <i class="fas fa-layer-group"></i> Developer By 
+            <span class="font-weight-bold text-light bg-dark p-1">Arif GEVENCI</span>
+            <span style="position: relative; top: 3px; font-size: 2.1em">}</span>
+        </p>
     </main>
     <!-- content -->
 @endsection

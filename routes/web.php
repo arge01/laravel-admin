@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AnasayfaController;
+
 Route::group(['prefix' => 'yonetim', 'namespace' => 'Yonetim'], function() {
     Route::redirect('/', config('app.url').'yonetim/oturumac');
     //oturum aç get-post
@@ -134,25 +136,20 @@ Route::group(['prefix' => ''], function(){
     Route::get('/', 'AnasayfaController@anasayfa')->name('anasayfa');
     Route::get('/index.html', 'AnasayfaController@anasayfa')->name('anasayfa');
     Route::match(['get', 'post'],'/mailgonder', 'AnasayfaController@mailgonder')->name('mail.gonder');
-    Route::get('/urunlerimiz.html', 'AnasayfaController@projeler')->name('projeler');
+
     Route::match(['get', 'post'], '/franchise.html', 'AnasayfaController@franchise')->name('franchise');
-    Route::get('/iletisim.html', 'AnasayfaController@iletisim')->name('iletisim');
-    Route::get('/subeler.html', 'AnasayfaController@referanslar')->name('referanslar');
-    Route::get('/menuler.html', 'AnasayfaController@menuler')->name('menuler');
     
-    /*Route::get('/{cafe}.html', 'AnasayfaController@menu');
-    Route::get('/bistro.html', 'AnasayfaController@menu');
-    Route::get('/premium.html', 'AnasayfaController@menu');*/
+    Route::get('{view}.html', function ($view, AnasayfaController $controller) {
+        if (view()->exists($view)) {
+            return $controller->deneme();
+        }
     
-    Route::get('/menuler/{gelen}', 'AnasayfaController@menu')->name('menu');
-    Route::match(['get', 'post'],'/mailgonder', 'AnasayfaController@mailgonder')->name('mail.gonder');
-    Route::match(['get', 'post'],'/ajax/city', 'AnasayfaController@city')->name('ajax.city');
-    Route::match(['get', 'post'],'/ajax/branch', 'AnasayfaController@branch')->name('ajax.branch');
+        return app()->abort(404, 'Page not found!');
+    });
+    
     Route::get('/api', 'AnasayfaController@api')->name('api');
     Route::get('/sitemap.xml', 'AnasayfaController@sitemap')->name('sitemap.xml');
     Route::get('/rss.xml', 'AnasayfaController@rss')->name('rss.xml');
-    Route::get('/bannner/{gelen}', 'AnasayfaController@banner')->name('banner');
-    Route::get('/urun/{gelen}', 'AnasayfaController@proje')->name('proje');
-    Route::get('/kategori/{gelen}', 'AnasayfaController@kategori')->name('kategori');
+
     Route::get('/{gelen}.html', 'AnasayfaController@icerik')->name('icerik');
 });

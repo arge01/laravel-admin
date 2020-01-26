@@ -211,6 +211,11 @@ class AnasayfaController extends Controller
         }
     }
 
+    public function deneme()
+    {
+        return "deneme";
+    }
+
     public function franchise(Request $request)
     {
         if ( request()->isMethod('post') ) {

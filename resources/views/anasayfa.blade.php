@@ -2,7 +2,9 @@
 @section('title', config('ayarlar.baslik'))
 @section('content')
     <!-- content -->
-
+    <main class="d-flex justify-content-center align-items-center min-vh-100">
+        <p>{ Developer By <span class="font-weight-bold text-light bg-dark p-1">Arif GEVENCI</span> }</p>
+    </main>
     <!-- content -->
 @endsection
 @section('css')

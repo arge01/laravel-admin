@@ -47,7 +47,7 @@ class AnasayfaController extends Controller
     public function get_view($view_name)
     {
         $title = "";
-        return view('icerik', compact("title"));
+        return view($view_name, compact("title"));
     }
 
     public function api()

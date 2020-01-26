@@ -2,7 +2,7 @@
 @section('title', config('ayarlar.baslik'). ' | '. $title)
 @section('content')
     <!-- content -->
-
+    
     <!-- content -->
 @endsection
 @section('css')

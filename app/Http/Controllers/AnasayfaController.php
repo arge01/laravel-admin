@@ -26,7 +26,7 @@ class AnasayfaController extends Controller
         $this->slider = $constant->slider(1,"ASC");
         $this->referanslar = $constant->referances();
         $this->footer = $constant->footer();
-        
+
         $this->constant = $constant;
         $this->request = $request;
     }
@@ -79,7 +79,7 @@ class AnasayfaController extends Controller
         $urunler = $this->constant->products();
         $versiyon = '<?xml version="1.0" encoding="utf-8"?>';
 
-        $content = view('sitemap', compact(
+        $content = view('seo/sitemap', compact(
             'menuler', 'kategoriler', 'urunler', 'versiyon'
         ));
         return response($content, 200)
@@ -93,7 +93,7 @@ class AnasayfaController extends Controller
         $urunler =$this->constant->products();
         $versiyon = '<?xml version="1.0" encoding="utf-8"?>';
         
-        $content = view('rss', compact(
+        $content = view('seo/rss', compact(
             'menuler', 'kategoriler', 'urunler', 'versiyon'
         ));
         return response($content, 200)

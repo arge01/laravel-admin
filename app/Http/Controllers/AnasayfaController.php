@@ -64,7 +64,7 @@ class AnasayfaController extends Controller
         $slider = $this->slider;
         $footer = $this->footer;
 
-        return view($view_name, compact("title", "navbar", "slider", "footer"));
+        return view("pages/".$view_name, compact("title", "navbar", "slider", "footer"));
     }
 
     public function api()

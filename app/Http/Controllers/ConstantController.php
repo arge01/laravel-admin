@@ -63,14 +63,14 @@ class ConstantController extends Controller
         return Icerikler::where('id', $id)->where('visible', 1)->first();
     }
 
-    public function slider()
+    public function slider($visible, $sortable)
     {
-        return Slider::where('visible', 1)->orderBy('sortable', 'ASC')->get();
+        return Slider::where('visible', $visible)->orderBy('sortable', $sortable)->get();
     }
 
-    public function alt_slider()
+    public function alt_slider($visible, $sortable)
     {
-        return Altslider::where('visible', 1)->orderBy('sortable', 'ASC')->get();
+        return Altslider::where('visible', $visible)->orderBy('sortable', $sortable)->get();
     }
 
     public function referances()

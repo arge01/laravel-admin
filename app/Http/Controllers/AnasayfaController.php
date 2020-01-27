@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\ConstantController;
+use App\Models\Sayfalar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -65,6 +66,21 @@ class AnasayfaController extends Controller
         $footer = $this->footer;
 
         return view("pages/".$view_name, compact("title", "navbar", "slider", "footer"));
+    }
+
+    public function sayfalar($view_name)
+    {
+        $sayfa = Sayfalar::where('visible', 1)->with('icerigi')->where('slug', $view_name)
+            ->with(array('galerisi' => function($query){
+                $query->orderBy('sortable', 'ASC');}))
+            ->with('icerigi')
+        ->firstOrFail();
+        $title = $sayfa->name;
+        $navbar = $this->navbar;
+        $slider = $this->slider;
+        $footer = $this->footer;
+
+        return view("icerik", compact("sayfa", "title", "navbar", "slider", "footer"));
     }
 
     public function api()

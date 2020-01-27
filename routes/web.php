@@ -149,7 +149,7 @@ Route::group(['prefix' => ''], function(){
     Route::match(['get', 'post'], '{view}.html', function ($view, AnasayfaController $controller) {
         if ( view()->exists("pages/".$view) )
             return $controller->icerikler($view);
-        return app()->abort(404, 'Page not found!');
+        return $controller->sayfalar($view);
     });
     
     /*

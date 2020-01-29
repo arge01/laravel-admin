@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnasayfaController;
+use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'yonetim', 'namespace' => 'Yonetim'], function() {
     Route::redirect('/', config('app.url').'yonetim/oturumac');
@@ -146,11 +147,15 @@ Route::group(['prefix' => ''], function(){
     /*
      * route any file
     */
-    Route::match(['get', 'post'], '{view}.html', function ($view, AnasayfaController $controller) {
-        if ( view()->exists("pages/".$view) )
-            return $controller->icerikler($view);
-        return $controller->sayfalar($view);
+    Route::group(['as'=>'sayfa'], function(){
+        Route::match(['get', 'post'], '{view}.html', function ($view, AnasayfaController $controller) {
+            if ( view()->exists("pages/".$view) )
+                return $controller->icerikler($view);
+            return $controller->sayfalar($view);
+        });
     });
+    
+    //->name('sayfa.', '[a-z0-9-]+');
     
     /*
      * route google seo

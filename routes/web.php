@@ -147,7 +147,7 @@ Route::group(['prefix' => ''], function(){
     /*
      * route any file
     */
-    Route::group(['as'=>'sayfalar'], function(){
+    Route::group(['as'=>'sayfa'], function(){
         Route::match(['get', 'post'], '{view}.html', function ($view, AnasayfaController $controller) {
             if ( view()->exists("pages/".$view) )
                 return $controller->icerikler($view);

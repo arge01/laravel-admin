@@ -38,7 +38,7 @@
                                         @php
                                         $ana_sayfa = \App\Models\Sayfalar::where('id', $sayfa->sayfa->belong)->first();
                                         @endphp
-                                        <a target="_blank" href="{{ route('icerik', $sayfa->sayfa->slug) }}">{{ $ana_sayfa == NULL ? $sayfa->sayfa->name : $ana_sayfa->name.' / '.$sayfa->sayfa->name }}</a>
+                                        <a target="_blank" href="{{ route('sayfa', $sayfa->sayfa->slug) }}">{{ $ana_sayfa == NULL ? $sayfa->sayfa->name : $ana_sayfa->name.' / '.$sayfa->sayfa->name }}</a>
                                     </td>
                                     <td>
                                         @php

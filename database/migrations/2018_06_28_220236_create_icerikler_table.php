@@ -17,10 +17,11 @@ class CreateIceriklerTable extends Migration
             $table->increments('id');
             $table->integer('sayfasi')->nullable();
             $table->string('name', 500)->nullable();
+            $table->string('label', 500)->nullable();
             $table->string('slug', 500)->nullable();
             $table->boolean('visible')->default(1);
             $table->text('icerik');
-
+            
             $table->timestamp('olusturma_tarihi')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('guncelleme_tarihi')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });

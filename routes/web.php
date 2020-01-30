@@ -155,8 +155,6 @@ Route::group(['prefix' => ''], function(){
         });
     });
     
-    //->name('sayfa.', '[a-z0-9-]+');
-    
     /*
      * route google seo
     */

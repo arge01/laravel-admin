@@ -80,19 +80,6 @@
 
                             </div>
 
-                            <div class="uk-form-row">
-                                <label>İl / İlçe Seçiniz</label>
-                                <select style="width: 100%; height: 50px; padding-left: 10px" class="form-control select2-multiple" id="il" name="il">
-                                    <option value="{{$gelen->il == null ? 0 : $gelen->il}}">{{$gelen->il == null ? 'İl Seçiniz' : $iller[$gelen->il - 1]->baslik}}</option>
-                                    @foreach ( $iller as $i => $il )
-                                    <option value="{{$il->id}}" id="{{'il-'.$il->id}}">{{$il->baslik}}</option>
-                                    @endforeach
-                                </select>
-                                <select style="width: 100%; height: 50px; padding-left: 10px" class="form-control select2-multiple" id="ilce" name="ilce">
-                                    <option value="{{$gelen->ilce == null ? 0 : $gelen->ilce}}">{{$gelen->ilce == null ? 'İlçe Seçiniz' : $ilceler[$gelen->ilce - 1]->baslik}}</option>
-                                </select>
-                            </div>
-
                         </div>
 
                     </div>
@@ -195,31 +182,6 @@
 
             checkTrue();
 
-        });
-
-        $('#il').on('change', function(){
-            $('#ilce').html("");
-            $('#ilce').append(
-                '<option value="0">Lütfen Bekleyiniz..</option>'
-            );
-            $.ajax({
-                type: "POST",
-                url: "{{route('ajax.city')}}",
-                data: { data: $(this).find('option:selected').val() },
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                dataType: "json",
-                success: function(data){
-                    $('#ilce').html("");
-                    console.log(data);
-                    $.each( data, function( key, value ) {
-                        $('#ilce').append(
-                            '<option value="'+value.id+'">'+value.baslik+'</option>'
-                        );
-                    });;
-                }
-            });
         });
 
     </script>

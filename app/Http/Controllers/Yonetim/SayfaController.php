@@ -24,14 +24,13 @@ class SayfaController extends Controller
             //sayfa ekle
             $this->validate(request(), ['belong' => 'required', 'name' => 'required']);
             $data = request()->all();
-            //return $data;
             if ( request('alt_menu') == 'evet' ) {
                 $sayfa = Sayfalar::create(['name' => stripcslashes($data['name']), 'slug' => stripcslashes(str_slug($data['name'])), 'belong' => $data['belong']]);
                 Icerikler::create(['sayfasi' => $sayfa->id, 'name' => $data['name'], 'icerik' => stripcslashes($data['icerik'])]);
             } else {
                 if ($data['belong'] != 0) {
-                    $varmi = Sayfalar::where('id', $data['belong'])->with('icerigi')->first();
-                    if ($varmi->icerigi == NULL) {
+                    $sayfa = Sayfalar::where('id', $data['belong'])->with('icerigi')->first();
+                    if ($sayfa->icerigi == NULL) {
                         Icerikler::create(['sayfasi' => $data['belong'], 'name' => $data['name'], 'icerik' => stripcslashes($data['icerik'])]);
                     } else {
                         return back()->with([
@@ -90,7 +89,7 @@ class SayfaController extends Controller
         {
             $this->validate(request(), ['belong' => 'required', 'name' => 'required']);
             $data = request()->all();
-            $gelen->update(['sayfasi' => $data['belong'] ,'name' => stripcslashes($data['name']), 'icerik' => stripcslashes($data['icerik'])]);
+            $gelen->update(['sayfasi' => $data['belong'], 'label' => $data['label'] ,'name' => stripcslashes($data['name']), 'icerik' => stripcslashes($data['icerik'])]);
             $sayfa = Sayfalar::where('id', $gelen->sayfasi)->first();
             $sayfa->update(['name' => stripcslashes($data['name']), 'slug' => stripcslashes(str_slug($data['name']))]);
             return back()->with([

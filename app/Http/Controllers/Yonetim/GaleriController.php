@@ -17,6 +17,7 @@ class GaleriController extends Controller
     public function ekle()
     {
         $input = Input::get('data');
+        $data = null;
         if ( $input == 'sayfa' ){
             $data = Sayfalar::where('visible', 1)->where('content', 0)->get();
         } else if ( $input == 'proje' ) {
@@ -24,6 +25,10 @@ class GaleriController extends Controller
         } else if ( $input == 'urun' ) {
             $data = Urunler::where('visible', 1)->get();
         }
+
+        if ( !$data )
+            return back();
+
         $key = Input::get('key');
         //return $key;
         if ( request()->isMethod('POST') ){

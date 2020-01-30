@@ -126,17 +126,17 @@
 
         CKEDITOR.replace( 'wysiwyg_ckeditor', {
 
-            filebrowserBrowseUrl: '{{ config('app.url').'admin/ckfinder/ckfinder.html' }}',
+            filebrowserBrowseUrl: '{{ config("app.url")."admin/ckfinder/ckfinder.html" }}',
 
-            filebrowserImageBrowseUrl: '{{ config('app.url').'admin/'.'ckfinder/ckfinder.html?type=Images' }}',
+            filebrowserImageBrowseUrl: '{{ config("app.url")."admin/"."ckfinder/ckfinder.html?type=Images" }}',
 
-            filebrowserFlashBrowseUrl: '{{ config('app.url').'admin/'.'ckfinder/ckfinder.html?type=Flash' }}',
+            filebrowserFlashBrowseUrl: '{{ config("app.url")."admin/"."ckfinder/ckfinder.html?type=Flash" }}',
 
-            filebrowserUploadUrl: '{{ config('app.url').'admin/'.'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files' }}',
+            filebrowserUploadUrl: '{{ config("app.url")."admin/"."ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files" }}',
 
-            filebrowserImageUploadUrl: '{{ config('app.url').'admin/'.'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files' }}',
+            filebrowserImageUploadUrl: '{{ config("app.url")."admin/"."ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files" }}',
 
-            filebrowserFlashUploadUrl: '{{ config('app.url').'admin/'.'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files' }}'
+            filebrowserFlashUploadUrl: '{{ config("app.url")."admin/"."ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files" }}'
 
         } );
 

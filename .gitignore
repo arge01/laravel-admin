@@ -12,3 +12,7 @@ yarn-error.log
 .env
 /public_html
 /resources/pages
+/app/Http/Controllers/AnasayfaController.php
+/app/Http/Controllers/ConstantController.php
+/app/Http/Controllers/Yonetim/*.php
+/app/Http/Models/*.php

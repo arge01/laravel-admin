@@ -18,6 +18,7 @@ class CreateReferansTable extends Migration
             $table->string('name', 800);
             $table->string('url', 800)->nullable();
             $table->string('img', 800)->nullable();
+            $table->text('text')->nullable();
 
             $table->timestamp('olusturma_tarihi')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('guncelleme_tarihi')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

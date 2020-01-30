@@ -16,3 +16,5 @@ yarn-error.log
 /app/Http/Controllers/ConstantController.php
 /app/Http/Controllers/Yonetim/*.php
 /app/Http/Models/*.php
+/database/migrations/*.php
+/database/seeds/*.

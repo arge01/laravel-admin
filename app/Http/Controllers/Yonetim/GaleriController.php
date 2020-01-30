@@ -26,9 +26,6 @@ class GaleriController extends Controller
             $data = Urunler::where('visible', 1)->get();
         }
 
-        if ( !$data )
-            return back();
-
         $key = Input::get('key');
         //return $key;
         if ( request()->isMethod('POST') ){

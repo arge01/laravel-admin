@@ -39,5 +39,7 @@
 <script src="{{ config('app.url') }}js/bootstrap-4/bootstrap.min.js"></script>
 <!-- javascript -->
 <script src="{{ config('app.url') }}css/fontawesome-5.12/js/all.min.js"></script>
+<!-- include js file -->
+<script src="{{ config('app.url') }}js/script.js"></script>
 @yield('javascript')
 </html>

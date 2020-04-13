@@ -22,8 +22,8 @@ class AdminTableSeeder extends Seeder
         ]);
 
         DB::table('uyeler')->insert([
-            'adsoyad'             => 'KAHVELAND',
-            'email'               => 'info@kahveland.com.tr',
+            'adsoyad'             => 'Yeni Admin',
+            'email'               => 'info@domain-adi.com.tr',
             'sifre'               => Hash::make(123),
             'aktivasyon_anahtari' => '1',
             'remember_token'      => '1',

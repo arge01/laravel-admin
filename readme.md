@@ -1,4 +1,4 @@
-<p>Laravel 5.4</p>
+<p>Laravel 5.5</p>
 <p>composer install</p>
 <p>db create db_name</p>
 <p>php artisan migrate</p>

@@ -15,7 +15,7 @@ class AdminTableSeeder extends Seeder
         DB::table('uyeler')->insert([
             'adsoyad'             => 'Yeni Admin',
             'email'               => 'info@domain-adi.com.tr',
-            'sifre'               => Hash::make(123),
+            'sifre'               => Hash::make('crypte hash şifre'),
             'aktivasyon_anahtari' => '1',
             'remember_token'      => '1',
             'rutbeler'            => 1

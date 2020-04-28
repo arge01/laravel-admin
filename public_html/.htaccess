@@ -9,9 +9,6 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
     
-    RewriteCond %{HTTP_HOST} ^www\.kahveland\.com.tr$
-    RewriteRule ^(.*)$ https://kahveland.com.tr/$1 [L,R=301]
-    
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 

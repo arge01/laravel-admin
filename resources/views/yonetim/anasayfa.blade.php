@@ -68,6 +68,10 @@
                                 <label>* Site Kurucusu</label>
                                 <input name="author" type="text" class="md-input" value="{{ config('ayarlar.author') }}" disabled/>
                             </div>
+                            <div class="uk-form-row">
+                                <label>SSL Ayarları</label>
+                                <input name="ssl" data-id="{{ config('ayarlar.ssl') }}" type="checkbox" data-switchery data-switchery-color="#7cb342" {{ config('ayarlar.ssl') == 'on' ? 'checked' : '' }} class="switch" />
+                            </div>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <h4 class="heading-ext">İletişim Ayarları</h4>

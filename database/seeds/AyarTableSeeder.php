@@ -40,6 +40,11 @@ class AyarTableSeeder extends Seeder
         ]);
 
         Ayarlar::create([
+            'name'  => 'ssl',
+            'value' => 0
+        ]);
+
+        Ayarlar::create([
             'name'  => 'mail',
             'value' => 'info@domain-adi.com.tr'
         ]);

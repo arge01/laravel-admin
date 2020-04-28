@@ -29,6 +29,7 @@ class AnasayfaController extends Controller
             Ayarlar::where('name', 'twitter')->update(['value' => stripcslashes($data['twitter'])]);
             Ayarlar::where('name', 'instagram')->update(['value' => stripcslashes($data['instagram'])]);
             Ayarlar::where('name', 'youtube')->update(['value' => stripcslashes($data['youtube'])]);
+            request()->has('ssl') ? Ayarlar::where('name', 'ssl')->update(['value' => stripcslashes($data['ssl'])]) : Ayarlar::where('name', 'ssl')->update(['value' => 'off']) ;
             return back()->with([
                 'mesaj_tur' => 'message',
                 'mesaj'     => 'Güncelleme işlemi başarılı',

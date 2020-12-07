@@ -85,6 +85,10 @@ class ConstantController extends Controller
 
     public function footer()
     {
-
+        try {
+            return Sayfalar::where("slug", "footer")->firstOrFail()->icerigi;
+        } catch (\Exception $e) {
+            return "Footer Eklenmemiş";
+        }
     }
 }
